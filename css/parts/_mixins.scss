@@ -1,0 +1,23 @@
+// Mixins
+
+@mixin text-truncate() {
+	display: block;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+@mixin box-shadow-big() {
+	box-shadow: 0 10px 20px 0 rgba(0,0,0,0.05);
+}
+
+@mixin serif() {
+	font-family: 'PT Serif', serif;
+	text-transform: initial;
+}
+
+@mixin sans-serif() {
+	font-family: 'PT Sans', sans-serif;
+	font-weight: bold;
+	text-transform: uppercase;
+}

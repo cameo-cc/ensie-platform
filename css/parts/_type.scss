@@ -1,0 +1,97 @@
+// Type
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: bold;
+
+	a {
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+
+h1 {
+	font-size: 1.1875rem;
+
+	@include media-breakpoint-up(md) {
+		font-size: 1.5rem;
+	}
+}
+
+h2 {
+	font-size: 1.1875rem;
+
+	@include media-breakpoint-up(md) {
+		font-size: 1.5rem;
+	}
+}
+
+h3 {
+	font-size: 1.1rem;
+
+	@include media-breakpoint-up(md) {
+		font-size: 1.25rem;
+	}
+}
+
+a {
+	color: $primaryColor;
+
+	&:hover {
+		color: $primaryDarkColor;
+	}
+}
+
+p {
+
+	&.tagline {
+		margin-top: 0.2rem;
+		font-size: 0.875rem;
+		@include sans-serif;
+	}
+
+	&.meta-title,
+	&.meta-date {
+		font-size: 0.75rem;
+		margin-bottom: 0;
+		color: $supportColor;
+		@include sans-serif;
+	}
+
+	&.meta-date {
+		text-align: left;
+
+		@include media-breakpoint-up(md) {
+			text-align: right;
+		}
+	}
+}
+
+.serif,
+.list-serif {
+	font-family: 'PT Serif', serif;
+
+	a, span, p {
+		font-family: 'PT Serif', serif;
+	}
+}
+
+.sans-serif,
+.list-sans-serif {
+	font-family: 'PT Sans', sans-serif;
+	text-transform: uppercase;
+
+	a, span, p {
+		font-family: 'PT Sans', sans-serif;
+	}
+}
+
+.search-heading {
+	margin: 1rem;
+
+	@include media-breakpoint-up(md) {
+		margin: 1.5625rem;
+	}
+}

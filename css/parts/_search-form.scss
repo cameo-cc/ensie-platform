@@ -1,0 +1,48 @@
+// Search form
+
+.search-from {
+	position: relative;
+
+	.input-group-text {
+		background-color: white;
+		border-color: white;
+		padding-left: 0.6rem;
+		padding-right: 0;
+
+		svg {
+			height: 18px;
+			width: 16px;
+			fill: $supportColor;
+		}
+	}
+
+	.btn {
+		font-size: 1rem;
+		font-weight: 800;
+		@include serif;
+
+		@include media-breakpoint-up(md) {
+			padding-left: 2.5rem;
+			padding-right: 2.5rem;
+		}
+	}
+}
+
+.container-search {
+	position: absolute;
+	left: 0;
+	right: 0;
+	z-index: 0;
+
+	.w-100 {
+		width: 100vw !important;
+	}
+
+	@include media-breakpoint-down(md) {
+
+		> .row > div[class^="col-"] {
+			padding-left: 0;
+			padding-right: 5px;
+		}
+	}
+}

@@ -1,0 +1,166 @@
+// Cards
+
+.card {
+	border: none;
+	margin-bottom: 1rem;
+	border-radius: 0.25rem;
+
+	.list-group-item {
+		background-color: transparent;
+		border: none;
+		line-height: 2.25rem;
+		padding: 0 1.25rem;
+
+		a {
+			color: $baseColor;
+			@include text-truncate;
+
+			img {
+				display: inline-block;
+				vertical-align: sub;
+				width: 24px;
+				height: 24px;
+				border-radius: 50%;
+				margin-top: 0;
+				margin-right: 12px;
+				margin-bottom: 0;
+				margin-left: 0;
+			}
+		}
+	}
+}
+
+.card-header {
+	margin-bottom: 0;
+	background-color: transparent;
+	border-bottom: none;
+	padding: 0;
+}
+
+.card-body {
+	padding: 0;
+}
+
+.card-primary {
+	background: #FFFFFF;
+	padding: 1rem;
+	@include box-shadow-big;
+
+	@include media-breakpoint-up(md) {
+		padding: 1.5625rem;
+	}
+}
+
+.card-secondary {
+	background-color: $secondaryCardColor;
+
+	&:before {
+		content: " ";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 4px;
+		height: 32px;
+		background-color: $primaryColor;
+		border-radius: calc(.25rem - 1px) 0 0 0;
+	}
+
+	.card-header {
+		font-family: 'PT Sans', sans-serif;
+		font-size: 0.875rem;
+		font-weight: 800;
+		text-transform: uppercase;
+		padding: .75rem 1.25rem 0;
+	}
+
+	.card-body {
+		padding: 1rem 0;
+	}
+}
+
+.card-transparent {
+	background: transparent;
+	padding: 1rem;
+
+	@include media-breakpoint-up(md) {
+		padding: 1.5625rem;
+	}
+}
+
+.card-result,
+.card-profile {
+	margin-top: 4rem;
+
+	&:first-child {
+		margin-top: 2rem;
+	}
+}
+
+.search-results {
+
+	.card-result {
+		margin-top: 5rem;
+
+		&:first-child {
+			margin-top: 2rem;
+		}
+	}
+}
+
+.card-work-list {
+	padding: 0;
+
+	@include media-breakpoint-up(md) {
+		padding: 0;
+	}
+
+	.card-header,
+	.work-list-item {
+		padding: 1rem;
+		border-bottom: solid $lineColor 1px;
+
+		@include media-breakpoint-up(md) {
+			padding: 1.5625rem;
+		}
+
+		&:last-child {
+			border-bottom: none;
+		}
+	}
+
+	h2 {
+		font-size: 0.75rem;
+		color: $supportColor;
+		margin-bottom: 0;
+		@include sans-serif;
+	}
+
+	h3 {
+		font-size: 1.5rem;
+	}
+}
+
+.card-related {
+
+	h2 {
+		font-size: 0.75rem;
+		color: $supportColor;
+		margin-bottom: 0;
+		@include sans-serif;
+	}
+}
+
+.card-advertisement {
+
+	.ownadd-img {
+		height: 150px;
+		width: 125px;
+		background-image: url(https://www.ensie.nl/img/boekensie.jpg);
+		background-size: cover;
+		background-position: right;
+		display: inline-block;
+		float: left;
+		position: relative;
+		z-index: 1;
+	}
+}

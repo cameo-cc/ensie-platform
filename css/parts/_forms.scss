@@ -1,0 +1,21 @@
+// Forms
+
+.form-control {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+
+	color: $baseColor;
+	outline: none;
+	border: 1px solid white;
+	padding: .375rem .5rem;
+	background-clip: unset;
+
+	&:focus {
+		color: $baseColor;
+		background-color: white;
+		border-color: white;
+		outline: 0;
+		box-shadow: none;
+	}
+}

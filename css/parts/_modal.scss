@@ -1,0 +1,97 @@
+// Modal
+
+.modal-header {
+	position: relative;
+	background-color: $primaryColor;
+	color: white;
+	border-bottom: none;
+	padding: 0.8rem 1rem;
+
+	.close {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		color: white;
+		opacity: 1;
+		margin: 0;
+	}
+}
+
+.modal-body {
+	padding: 1.5rem;
+
+	ul, ol {
+		padding: 0 1.2rem;
+	}
+}
+
+.modal-content {
+	border: none;
+}
+
+.modal-login {
+
+	.modal-content {
+
+		p {
+			margin-bottom: 1.5rem;
+		}
+	}
+
+	.form-fields {
+
+		&.hidden {
+			display: none;
+		}
+
+		&.show {
+			display: block;
+		}
+	}
+
+	label {
+		color: $baseColor;
+		font-size: 0.75rem;
+		@include sans-serif;
+	}
+
+	.form-control {
+		border-color: $supportColor;
+	}
+
+	.btn {
+		padding-top: 0.8rem;
+		padding-bottom: 0.8rem;
+	}
+
+	.form-footer {
+
+		a {
+			color: $supportColor;
+		}
+	}
+
+	@include media-breakpoint-down(md) {
+		background-color: white;
+
+		.modal-dialog {
+			margin: 0;
+		}
+
+		.modal-header {
+			border-radius: 0;
+		}
+
+		.modal-content {
+			border: 0;
+			border-radius: 0;
+			height: 100vh;
+		}
+
+		.btn {
+			margin-bottom: 1rem;
+		}
+
+	}
+}

@@ -1,0 +1,47 @@
+// Base
+
+html {
+	-webkit-font-smoothing: antialiased;
+	opacity: 1;
+}
+
+body {
+	font-family: 'PT Serif', serif;
+	color: $baseColor;
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+main {
+	background-color: $backgroundColor;
+	padding-top: 4rem;
+	padding-bottom: 2rem;
+
+	@include media-breakpoint-up(md) {
+		padding-top: 4.5rem;
+	}
+
+	.card:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.logo {
+
+	svg {
+		fill: white;
+	}
+}
+
+*:focus {
+	outline: 0 !important;
+}
+
+.clear {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}

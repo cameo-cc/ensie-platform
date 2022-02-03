@@ -1,0 +1,232 @@
+// Buttons
+button, a {
+	outline: none;
+	transition: 0.3s;
+
+	&:focus,
+	&.focus {
+		outline: none;
+		box-shadow: none;
+	}
+
+	&:hover {
+		transition: 0.3s;
+	}
+}
+
+.btn {
+	@include sans-serif;
+	font-size: 0.75rem;
+
+	&:focus,
+	&.focus {
+		outline: none;
+		box-shadow: none;
+	}
+
+	&:hover {
+		background-color: $baseColor;
+		color: white;
+		border-color: $baseColor;
+	}
+}
+
+.btn-primary {
+	background-color: $primaryColor;
+	border-color: $primaryColor;
+}
+
+.btn-secondary {
+	background-color: $secondaryColor;
+	border-color: $secondaryColor;
+}
+
+.btn-support {
+	background-color: $supportColor;
+	border-color: $supportColor;
+	color: white;
+	padding: .2rem .5rem;
+}
+
+.btn-outline-primary {
+	position: relative;
+	font-size: .75rem;
+	font-weight: bold;
+	color: $primaryColor;
+	border-color: $primaryColor;
+	@include sans-serif;
+
+	&.btn-disabled {
+		color: #4c4b4f !important;
+		border-color: #4c4b4f !important;
+		background-color: transparent !important;
+		cursor: text;
+
+		&:after {
+			display: none;
+		}
+	}
+
+	.btn-label,
+	.tagit-label {
+		position: relative;
+		z-index: 1;
+	}
+
+	&:after {
+		content: " ";
+		position: absolute;
+		width: 100%;
+		height: 0;
+		left: 0;
+		bottom: 0;
+		background-color: $primaryColor;
+		border-radius: .25rem;
+		transition: height 0.3s;
+	}
+
+	&:hover {
+		background-color: transparent;
+		color: white;
+		border-color: $primaryColor;
+
+		&:after {
+			height: 100%;
+			bottom: 0;
+		}
+	}
+
+	&.btn-inverse {
+		color: white;
+		border-color: $primaryColor;
+		background-color: $primaryColor;
+
+		&:after {
+			background-color: white;
+		}
+
+		&:hover {
+			background-color: white;
+			color: $primaryColor;
+			border-color: $primaryColor;
+		}
+	}
+}
+
+.btn-outline-secondary {
+	position: relative;
+	font-size: .75rem;
+	font-weight: bold;
+	color: $secondaryColor;
+	border-color: $secondaryColor;
+	@include sans-serif;
+
+	.btn-label,
+	.tagit-label {
+		position: relative;
+		z-index: 1;
+	}
+
+
+	&:after {
+		content: " ";
+		position: absolute;
+		width: 100%;
+		height: 0;
+		left: 0;
+		bottom: 0;
+		background-color: $secondaryColor;
+		border-radius: .25rem;
+		transition: height 0.3s;
+	}
+
+	&:hover {
+		background-color: transparent;
+		color: white;
+		border-color: $secondaryColor;
+
+		&:after {
+			height: 100%;
+			bottom: 0;
+		}
+	}
+
+	&.btn-inverse {
+		color: white;
+		border-color: $secondaryColor;
+		background-color: $secondaryColor;
+
+		&:after {
+			background-color: white;
+		}
+
+		&:hover {
+			background-color: white;
+			color: $secondaryColor;
+			border-color: $secondaryColor;
+		}
+	}
+}
+
+.btn-md {
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+}
+
+.btn-lg {
+	padding-top: 0.8rem;
+	padding-bottom: 0.8rem;
+}
+
+.btn-link {
+	color: $supportColor;
+	padding: 0;
+	text-decoration: underline;
+
+	&:hover,
+	&:focus {
+		color: $baseColor;
+		background-color: transparent;
+		border: none;
+	}
+
+	svg {
+		display: inline-block;
+		vertical-align: text-top;
+		width: 12px;
+		height: auto;
+	}
+}
+
+.icon-chevron {
+
+	&.flip {
+		transform: scaleY(-1);
+	}
+}
+
+// Tags
+.tag-list {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+.tagit-choice {
+	display: inline-block;
+	background: transparent;
+	color: transparent;
+	line-height: 1;
+	margin: 0.4rem 0.2rem 0.2rem 0;
+	padding: 0;
+	@include sans-serif;
+}
+
+// Show more results
+.show-more-results {
+	padding-top: 1rem;
+
+	.btn {
+		min-width: 40%;
+	}
+}

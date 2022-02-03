@@ -1,0 +1,147 @@
+// Profile
+
+.profile-user {
+	position: relative;
+	padding-left: 3.5rem;
+
+	h1, h3 {
+		font-size: 1rem;
+		margin: 0;
+		@include text-truncate;
+	}
+
+	p {
+		font-size: 0.75rem;
+		color: $supportColor;
+		@include text-truncate;
+		@include sans-serif;
+	}
+
+}
+
+.profile-picture {
+	border-radius: 50%;
+	vertical-align: top;
+	width: 48px;
+	height: auto;
+
+	position: absolute;
+	left: 0;
+	background: #b4b3b7;
+	border: solid #D8D8D8 1px;
+	text-align: center;
+}
+
+.profile-stats {
+
+	@include media-breakpoint-up(md) {
+		margin-top: 1rem;
+
+	}
+
+	div[class^="col-"]{
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+	.words, .views, .website {
+		padding-left: 2.5rem;
+		position: relative;
+		font-size: .75rem;
+		@include sans-serif;
+	}
+
+	svg {
+		position: absolute;
+	}
+
+	.words {
+
+		svg {
+			left: 0.5rem;
+			width: 9px;
+			height: auto;
+		}
+
+		@include media-breakpoint-up(md) {
+			padding-left: 1rem;
+
+			svg {
+				left: 0;
+			}
+		}
+	}
+
+	.views {
+
+		svg {
+			top: 0.2rem;
+			left: 0;
+			width: 25px;
+			height: auto;
+		}
+
+		@include media-breakpoint-up(md) {
+			padding-left: 2.2rem;
+
+			svg {
+				top: 0;
+				left: 0;
+				width: 30px;
+				height: auto;
+			}
+		}
+	}
+
+	.website {
+
+		svg {
+			left: 0.4rem;
+			width: 14px;
+			height: auto;
+		}
+
+		a {
+			color: $baseColor;
+		}
+
+		@include media-breakpoint-up(md) {
+			padding-left: 1.2rem;
+
+			svg {
+				left: 0;
+			}
+		}
+	}
+}
+
+.profile-bio {
+	max-height: 4.5rem;
+	overflow: hidden;
+
+	&.show {
+		max-height: none;
+	}
+}
+
+.card-profile,
+.card-result {
+
+	.profile-user {
+		padding-left: 4.2rem;
+
+		.profile-picture {
+			width: 60px;
+			height: auto;
+		}
+	}
+
+	.card-header {
+		margin-top: -3.8rem;
+		margin-bottom: 1.5rem;
+
+		@include media-breakpoint-up(md) {
+			margin-top: -4.3rem;
+		}
+	}
+}
